@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<meta charset="UTF-8">
+
+<head>
+    <title>Essai DHTML</title>
+</head>
+
+<body>
+
+    <p id="paragraphe" onclick="change_enfants()">Un texte avec plein d'enfants, <b>en gras</b>, <i>en italique</i>...
+        et une image <img alt="Un dauphin" src="dauphin3_1_.jpg" height="111" width="200"></p>
+    <script>
+
+        function change_enfants() {
+            const phrase = document.getElementById("paragraphe");
+            phrase.firstChild.textContent = "On change le texte plein d'enfant, ";
+            phrase.lastChild.height /= 2;
+            phrase.lastChild.width /= 2;
+            phrase.childNodes[1].style.color="blue";
+            phrase.childNodes[3].style.display="block"
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<meta charset="UTF-8">
+
+<head>
+    <title>Essai DHTML</title>
+    <style>
+        #citation {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        #citation p {
+            position: relative;
+            top: 0px;
+            left: 0px;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <input type="button" value="Lancer l'animation!" onclick="anime()">
+    <div id="citation">
+        <p>un essai de texte</p>
+        <p>avec un retour à la ligne</p>
+        <p>et un second&nbsp;!</p>
+        <p>C'est chouette, non&nbsp;?</p>
+    </div>
+    <div>
+        <p id="info"></p>
+    </div>
+    <script>
+        var couleur = 0;
+        function anime_paragraphe(element) {
+            element.style.color = "rgb("+String(couleur)+"%,"+String(couleur)+"%,"+String(couleur)+"%)";
+
+            if(couleur < 90) {
+                setTimeout(() => {
+                    anime_paragraphe(element);
+                }, 100);
+                couleur++;
+            } else {
+                let info = document.getElementById("info");
+                info.textContent = "Plop&nbsp;!";
+            }
+
+        }
+
+        function anime() {
+            const citation = document.getElementById("citation");
+            for (let i = 0; i < citation.childNodes.length; i++) {
+                if (citation.childNodes[i].nodeName == "P") {
+                        anime_paragraphe(citation.childNodes[i]);
+                    }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    /* background-color: #333; */
+}
+form {
+    width: 100vw;
+    margin: auto;
+    text-align: end;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+label {
+    /* display: block; */
+    /* margin: 1rem auto; */
+    /* width: 500px; */
+}
+input, select {
+    width: 300px;
+}
+.inputRadio {
+    width: 20px;
+    margin-right: 288px;
+    margin-left: 0;
+}
+
+#bonheur, #vertu {
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    width: 280px;
+}
+
+#bonheur {
+    background-image: url("http://lp-projet-web.ovh/css3/exercices/boitesListes/corrige/marguerite1.jpg");
+}
+#vertu {
+    background-image: url("http://lp-projet-web.ovh/css3/exercices/boitesListes/corrige/coquelicot1.jpg");
+}
+
+/* test 2 */
+
+.menu {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    border-bottom: 2px solid black;
+}
+
+.menu li {
+    list-style: none;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    font-size: 2rem;
+    border-radius: .5rem;
+    transition: ease 400ms;
+}
+.menu:after {
+    content: "";
+    border-bottom: 2px solid black;
+}
+.menu li:hover {
+    scale: 1.2;
+    border: 2px solid black;
+    background-color: #fff;
+    color: #ccc;
+    cursor: pointer;
+}
+.gros {
+    height: 70px;
+    width: 100px;
+    position: relative;
+    background-color: red;
+}
+.petit {
+    height: 35px;
+    width: 50px;
+    position: absolute;
+    background-color: green;
+}
+
+/* test 3 */
+
+#menu_ex04 {
+    display: flex;
+    gap: 2rem;
+}
+#menu_ex04 a {
+    color: #ccc;
+}
+#menu_ex04 li {
+    width: 5rem;
+    text-align: center;
+    padding: .8rem 1rem;
+}
+#menu_ex04>li {
+    position: relative;
+    background-color: #000;
+}
+#menu_ex04>li:hover {
+    background-color: #444;
+}
+#menu_ex04>li ul {
+    position: absolute;
+    left: 0rem;
+    top: 2rem;
+    background-color: aquamarine;
+}
+#menu_ex04>li ul>li {
+    color: #000;
+}
+
+/* test 4 From */
+
+.form {
+    margin: 10rem 0rem;
+    padding: 1rem;
+    border: 1px solid black;
+    display: flex;
+    gap: 1rem;
+    /* justify-content: space-between; */
+}
+
+.form .inputTest4 {
+    /* flex-grow: 2; */
+    flex: 1;
+}

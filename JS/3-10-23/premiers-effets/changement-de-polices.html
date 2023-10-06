@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Premiers effets&nbsp;: changements de police</title>
+    <style>
+        h1 {
+            text-align: center
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Changements de polices</h1>
+
+    <div id="intro">
+        <h2>Introduction</h2>
+        <p>Comme on l'a vu à l'exercice précédent, les signes - présents dans les <code>CSS</code> ne peuvent pas être
+            pris en compte dans les appels JavaScript, langage pour lequel ce signe est un opérateur. Il est nécessaire
+            alors d'accoler les deux composantes, et d'affecter une majuscule au deuxième terme (par exemple,
+            <code>textAlign='center'</code> au lieu de <code>text-align: 'center'</code>). Cela se généralise aux autres
+            propriétés des feuilles de style, comme le texte (<code>textDecoration</code>, <code>wordSpacing</code>,
+            <code>lineHeight</code>) ou bien la police elle-même (<code>fontFamily</code>, <code>fontSize</code>)...</p>
+    </div>
+
+    <div id="exemple">
+        <h2>Exemple</h2>
+        <p onmouseover="this.style.textDecoration='line-through'; this.style.lineHeight='200%'; this.style.fontFamily='Verdana'; this.style.fontSize='150%'; this.style.textTransform='capitalize'"
+            onmouseout="this.style.textDecoration='none'; this.style.lineHeight='100%';
+	this.style.fontFamily='Times New Roman'; this.style.fontSize='100%'; this.style.textTransform='none'">
+            Nous allons complètement modifier ce paragraphe.<br>
+            Nous allons complètement modifier ce paragraphe.
+        </p>
+    </div>
+
+    <div id="exercice">
+        <h2>Exercice</h2>
+        <p>
+            Reproduire l'effet précédent&nbsp;:
+        </p>
+        <ol>
+            <li onmouseover="this.style.fontFamily='Verdana'"; onmouseout="this.style.fontFamily='Times New Roman'"> police Verdana&nbsp;;</li>
+            <li onmouseover="this.style.textDecoration='line-through'"; onmouseout="this.style.textDecoration='none'"> un trait en travers des lettres (<code>line-through</code>)&nbsp;;</li>
+            <li onmouseover="this.style.fontSize='2em'"; onmouseout="this.style.fontSize='1em'"> une multiplication par 2 de la hauteur des lignes&nbsp;;</li>
+            <li onmouseover="this.style.fontSize='1.5em'"; onmouseout="this.style.fontSize='1em'"> une multiplication par 1,5 de la taille des caractères par rapport à la taille par défaut&nbsp;;</li>
+            <li onmouseover="this.style.textTransform='capitalize'"; onmouseout="this.style.textTransform='none'"> une capitalisation des premières lettres des mots.</li>
+        </ol>
+        <p>... au passage de la souris</p>
+    </div>
+
+    <p><a href="../intro.html#modifpolice">Retour au cours</a></p>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CSS</title>
+</head>
+<body>
+    <form name="form1" method="post" action="">
+        <label for="bonheur">Votre idée du bonheur :
+        <input class="inputText" name="bonheur" id="bonheur"
+       type="text"></label>
+        <label for="vertu">Votre vertu préférée :
+       <input name="vertu" class="inputText" id="vertu"
+       type="text"></label>
+       <label for="fleur_0">Le coqueliquot :
+        <input name="fleur" class="inputRadio" id="fleur_0" value="c1"
+       type="radio"></label>
+        <label for="fleur_1">L'orchidée :
+        <input name="fleur" class="inputRadio" id="fleur_1" value="o1"
+       type="radio"></label>
+        <label for="fleur_2" class="labelText">La rose :
+        <input name="fleur" class="inputRadio" id="fleur_2" value="r1"
+       type="radio"></label>
+       
+        <label for="auteurs">Vos auteurs préférés :
+        <select name="auteurs" id="auteurs" class="inputText">
+        <option value="ga">Gabriel Garcia Marquez</option>
+        <option value="ka">Kamrabata</option>
+        <option value="na">Nabokov</option>
+        </select></label>
+        <label for="submit">
+        <input name="submit" class="inputText" id="submit"
+       accesskey="M" tabindex="2" type="submit">
+        </label>
+        <p></p>
+    </form> 
+    <ul class="menu">
+        <li>Menu 1</li>
+        <li>Menu 2</li>
+        <li>Menu 3</li>
+        <li>Menu 4</li>
+        <li>Menu 5</li>
+    </ul> 
+    <div class="gros">
+        <div class="petit"></div>
+    </div>
+    <ul id="menu_ex04">
+        <li><a href="lien1.htm">Lien 1</a>
+            <ul>
+            <li><a href="#">Lien11</a></li>
+            <li><a href="#">Lien12</a></li>
+            <li><a href="#">Lien13</a></li>
+            </ul>
+        </li>
+        <li><a href="lien2.htm">Lien 2</a>
+            <ul>
+            <li><a href="#">Lien21</a></li>
+            <li><a href="#">Lien22</a></li>
+            <li><a href="#">Lien23</a></li>
+            </ul>
+        </li>
+        <li><a href="lien3.htm">Lien 3</a>
+            <ul>
+            <li><a href="#">Lien31</a></li>
+            <li><a href="#">Lien32</a></li>
+            <li><a href="#">Lien33</a></li>
+            </ul>
+        </li>
+        <li><a href="lien4.htm">Lien4</a></li>
+    </ul>
+    <div class="form">
+        <label for="rechercher" class="labelTest4">Rechercher</label>
+        <input type="search" class="inputTest4">
+        <button>Go</button>
+    </div>
+</body>
+</html>

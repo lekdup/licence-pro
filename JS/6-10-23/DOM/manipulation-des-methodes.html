@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Manipulation des méthodes d'accès aux éléments</title>
+<style>
+    h2  {text-align: center}
+		
+		img.exemple{
+			display: block;
+			text-align: center;
+			border: 1px gray solid;
+		}
+</style>
+</head>
+<body>
+<h2>Manipulation des méthodes d'accès aux éléments</h2>
+
+<div id="intro">
+<h2>Introduction</h2>
+<p>
+L'<a href="../exemples/exemple1.html">exemple du cours</a> vous a montré comment utiliser les méthodes <code>getElementById</code>, <code>getElementsByName</code> et <code>getElementsByTagName</code>, ainsi que leurs limitations. 
+</p>
+
+<p>Dans l'exercice suivant, vous allez apprendre à les utiliser, ainsi qu'une autre méthode.</p>
+</div>
+
+<div id="exercice">
+<h2>Exercice&nbsp;: méthodes <code>getElementById</code>, <code>getElementsByName</code> et <code>getElementsByTagName</code>.</h2>
+
+<ol>
+	<li>Télécharger la <a href="exo6vide.html">page HTML vide</a> dans laquelle vous aurez à insérer votre code JavaScript. Notez en passant l'utilisation des attributs <code>title</code> pour informer sur les éléments de titre et paragraphe (pour les tester, laisser la souris au-dessus de l'élément).</li>
+	<li>Créer une fonction <code>modif_paragraphe</code>, appelée en cliquant sur le titre. Cette fonction sélectionne le paragraphe en utilisant son identifiant, puis le modifie avec la propriété <code>innerHTML</code>, en remplaçant le mot <b>original</b> en caractères droit par le mot <b>corrigé</b>, en italique.</li>
+	<li>Créer une fonction <code>centrage_h1</code>, appelée en cliquant sur le paragraphe. Cette fonction détecte d'abord les éléments portant le nom de balise <code>h1</code>. Elle sélectionne ensuite le premier d'entre eux (ça tombe bien, il n'y en a qu'un seul sur la page&nbsp;!), et modifie son attribut <code>align</code>, en lui affectant la valeur "center", à l'aide de la méthode <code>setAttribute</code>... dont vous testerez le fonctionnement.</li>
+</ol>
+	
+</div>
+
+    <h1 title="Quand on clique, modif du paragraphe">Grand titre</h1>
+    <p id="premier" title="Quand on clique, centrage du titre">Premier paragraphe original.</p>
+
+    <script>
+        const titre = document.getElementsByTagName("h1")[0];
+        console.log(titre);
+        let phrase = document.getElementById("premier");
+        console.log(phrase);
+        
+        function modif_paragraphe() {
+            phrase.innerHTML = "Premier paragraphe <i>corrigé</i>.";
+        }
+        titre.addEventListener("click", modif_paragraphe);
+
+        function centrage_h1() {
+            titre.setAttribute("align", "center");
+        }
+        phrase.addEventListener("click", centrage_h1);
+    </script>
+</body>
+</html>

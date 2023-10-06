@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Premiers effets&nbsp;: changements de contenu</title>
+    <style>
+        h1 {
+            text-align: center
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Changements de contenus</h1>
+
+    <div id="intro">
+        <h2>Introduction</h2>
+        <p>
+            Il est également possible de changer le contenu d'un tag. On peut réaliser un <i>rollover</i>, qui consiste
+            à changer une image au passage de la souris, ce qui sert parfois lorsqu'il s'agit de matérialiser
+            l'activation possible d'un bouton par exemple. Mais il est également envisageable de modifier le contenu de
+            l'élément lui-même, comme par exemple le texte inséré entre deux tags <code>&lt;b&gt;</code> et
+            <code>&lt;/b&gt;</code>. On utilise pour ce faire la propriété <code>this.innerHTML</code>.
+        </p>
+    </div>
+
+    <div id="exemple">
+        <h2>Exemples</h2>
+        <h3>Exemple de <i>rollover</i></h3>
+        <p>
+            <img src="1cercle.gif" width="16" height="16" alt="bouton1" onmouseover="this.src='2cercle.gif'; this.alt='bouton2'"
+                onmouseout="this.src='1cercle.gif'; this.alt='bouton1'">
+        </p>
+        <h3>Exemple de modification dynamique de texte</h3>
+    </div>
+    <p onmouseover="this.innerHTML='Le texte est modifié.'" onmouseout="this.innerHTML='Petit texte à modifier.'">
+        Petit texte à modifier.</p>
+    <div id="exercice">
+        <h2>Exercices</h2>
+        <ol>
+            <li>Trouver deux images si possible de tailles différentes sur votre machine&nbsp;; les insérer dans une
+                page web élémentaire en rollover. Tenir compte des effets de hauteur et de largeur de telle manière
+                qu'aucune image ne soit déformée.
+                <img src="elephant.jpeg" alt="éléphant" onmouseover="this.src='souris.jpeg'; this.alt='souris'"; onmouseout="this.src='elephant.jpeg'; this.alt='elephant'">
+            
+            </li>
+            <li>À l'aide de la propriété <code>this.innerHTML</code> que vous expérimenterez si vous ne la connaissez
+                pas, reproduire l'exemple suivant&nbsp;:<br>
+                <span onclick="this.innerHTML='Un petit texte avec un <b>texte en gras</b> au milieu'"
+                    ondblclick="this.innerHTML='Un petit texte avec un <i>texte en italique</i> au milieu'"
+                    style="text-align:center">
+                    Un petit texte avec un <i>texte en italique</i> au milieu</span>
+        </ol>
+    </div>
+
+    <p><a href="../intro.html#modifcontenu">Retour au cours</a></p>
+
+</body>
+
+</html>

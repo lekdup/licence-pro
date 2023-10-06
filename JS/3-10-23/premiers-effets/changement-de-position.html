@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Premiers effets&nbsp;: changements de position</title>
+    <style>
+        h1 {
+            text-align: center
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Changements de position</h1>
+
+    <div id="intro">
+        <h2>Introduction</h2>
+        <p>Il est possible, en utilisant la propriété <code>style</code>, de modifier un certain nombre de détails de
+            l'élément sélectionné, notamment sa position, mais également son encombrement, son alignement...</p>
+    </div>
+
+    <div id="exemple">
+        <h2>Exemple</h2>
+        <!-- Attention aux majuscules dans le text-align -->
+        <p style="position: absolute; left: 10px; top: 230px; width:400px"
+            onmouseover="this.style.left='100px'; this.style.top='300px'; this.style.width='600px'; style.textAlign='center'"
+            onmouseout="this.style.left='10px'; this.style.top='230px'; this.style.width='400px'; style.textAlign='left'">
+            Exemple de texte à géométrie variable. Exemple de texte à géométrie variable.
+            Exemple de texte à géométrie variable. Exemple de texte à géométrie variable.
+            Exemple de texte à géométrie variable. Exemple de texte à géométrie variable.
+            Exemple de texte à géométrie variable. Exemple de texte à géométrie variable.
+            Exemple de texte à géométrie variable. Exemple de texte à géométrie variable.
+            Exemple de texte à géométrie variable. Exemple de texte à géométrie variable.
+            Exemple de texte à géométrie variable.
+        </p>
+        <br>
+    </div>
+
+    <div id="exercice" style="position: relative; top :160px; left: 0px;">
+        <h2>Exercice</h2>
+        <p style="width: 500px"
+            onclick="this.style.position='absolute'; this.style.top='-200px'; this.style.left='100px'; this.style.width='1px'";
+            ondblclick="this.style.top='10px'; this.style.left='0'; this.style.width='500px'"
+        >
+            Créer une page web constituée d'un court paragraphe (quelques lignes), d'une largeur de 500 pixels. En
+            cliquant sur ce paragraphe, il doit s'afficher <i>grosso-modo</i> au centre de la page, avec un mot par
+            ligne. Le double click doit permettre de revenir au format initial (aligné à gauche, occupant une largeur de
+            500 pixels).</p>
+    </div>
+
+    <p><a href="../intro.html#modifposition">Retour au cours</a></p>
+
+</body>
+
+</html>

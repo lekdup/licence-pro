@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Premiers effets&nbsp;: changements de couleur</title>
+    <style>
+        h1 {
+            text-align: center
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Changements de couleurs</h1>
+
+    <div id="intro">
+        <h2>Introduction</h2>
+        <p>
+            Les changements de couleurs d'une zone de texte font appel &agrave; <code>onmouseover</code>,
+            <code>onmouseout</code>, <code>onclick</code> et <code>ondblclick</code>, ainsi qu'aux m&eacute;thodes de
+            contr&ocirc;le du style par JavaScript appliqu&eacute;es &agrave; l'objet courant indiqu&eacute; par
+            <code>this</code>.
+        </p>
+    </div>
+
+    <div id="exemple">
+        <h2>Exemple</h2>
+        <!-- Noter les positions des guillemets-->
+        <p onmouseover="this.style.color='blue'" onmouseout="this.style.color='black'"> Ceci est un texte dont la
+            couleur va changer au passage de la souris.
+        </p>
+    </div>
+
+    <div id="exercice">
+        <h2>Exercice</h2>
+        <p>Créer une page web comportant une phrase, dont un groupe de mots, de couleur noire au chargement, doit
+            prendre la couleur&nbsp;:</p>
+        <ol>
+            <li onmouseover="this.style.color='red'" onmouseout="this.style.color='black'">rouge au passage de la souris&nbsp;;</li>
+            <li onclick="this.style.color='lime'">citron vert (lime) en r&eacute;ponse &agrave; un click&nbsp;;</li>
+            <li ondblclick="this.style.color='navy'">bleu marine (navy) en r&eacute;ponse &agrave; un double click.</li>
+        </ol>
+    </div>
+
+
+</body>
+
+</html>

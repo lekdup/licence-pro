@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilisation de while</title>
+    <script>
+        function testWhile() {
+            // let prompt = window.prompt('Entrée une chaîne de caractères contenant le caractès "');
+            // alert(prompt);
+            // let prompt = " ";
+            // while (prompt.search("\"") <= -1 ) {
+            //     prompt = window.prompt('Entrée une chaîne de caractères contenant le caractès "')
+            // }
+            // alert(`la chaîne entrée est : ${prompt}`);
+            var chaine;
+            do {
+                chaine = window.prompt('Entrez une chaîne de caractères contenant le caractère "');
+            } while(chaine.indexOf("\"") == -1)
+            alert(`la chaîne entrée est  : ${chaine}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Utilisation de while</h1>
+
+    <p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="testWhile()">Lancer la fonction</button></p>
+
+</body>
+</html>

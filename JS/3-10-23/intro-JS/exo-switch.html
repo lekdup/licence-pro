@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilisation de switch et de l'objet Date</title>
+    <script>
+        function jourDeLaSemaine() {
+            let jour = new Date().getDay();
+            console.log(jour);
+            switch(jour) {
+                case 0: 
+                alert("Dimanche");
+                break;
+                case 1: 
+                alert("Lundi");
+                break;
+                case 2: 
+                alert("Mardi");
+                break;
+                case 3: 
+                alert("Mercredi");
+                break;
+                case 4: 
+                alert("Jeudi");
+                break;
+                case 5: 
+                alert("Vendredi");
+                break;
+                case 6: 
+                alert("Samedi");
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Utilisation de switch et de l'objet Date</h1>
+
+<p>Cliquez sur le bouton pour lancer la fonction&nbsp;: <button onclick="jourDeLaSemaine()">Lancer la fonction</button></p>
+
+    
+</body>
+</html>
