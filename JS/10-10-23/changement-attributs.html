@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>Essai DHTML</title>
+    <meta charset="UTF-8">
+
+</head>
+
+<body onclick="change_liste()">
+
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+        <li>f</li>
+        <li>g</li>
+        <li>h</li>
+    </ul>
+    <script>
+        let list = document.getElementsByTagName("ul")[0];
+        let items = document.getElementsByTagName("li");
+        console.log(items);
+        
+        function change_liste() {
+            list.setAttribute("type", "circle");
+            for (let i=0; i<= items.length; i++) {
+                items[i].textContent = "| blabla |";
+                items[i].setAttribute("onclick", "alert('Bonjour')");
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>
