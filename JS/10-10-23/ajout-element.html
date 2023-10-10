@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>Ajout / Suppression d'éléments</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <form>
+        <input type="text" id="inputValue">
+        <input type="button" onclick="addItem()" value="Add"/>
+        <input type="button" onclick="deleteItem()" value="Delete"/>
+    </form>
+
+    <ul id="listecommissions">
+        <li>1kg de farine</li>
+        <li>un pack de lait</li>
+    </ul>
+    <script>
+
+        let list = document.getElementById("listecommissions");
+        let item = list.childNodes;
+
+
+        function addItem() {
+            let texte = document.getElementById("inputValue").value;
+        
+            let newLi = document.createElement("li");
+            newLi.textContent = texte;
+            list.appendChild(newLi);
+            texte = "";
+        }
+        console.log(list.lastElementChild);
+        
+        function deleteItem() {
+            if (list.lastElementChild) {
+                list.removeChild(list.lastElementChild);
+            }
+        }
+
+    </script>
+</body>
+
+</html>
