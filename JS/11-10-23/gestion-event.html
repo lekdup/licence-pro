@@ -15,6 +15,14 @@
     <script>
         function Init() {
             let texte = document.getElementById("span1");
+
+            // par défault event capture est false. False qui nous permet de monter vers le haut alors que true nous permet de décendre vers le bas de ses parents.
+
+
+            // texte.addEventListener("click", () => console.log(1), false);
+            // texte.addEventListener("click", () => console.log(2), true);
+            // texte.parentNode.addEventListener("click", () => console.log(3), false);
+            // texte.parentNode.addEventListener("click", () => console.log(4), true);
             texte.addEventListener("click", monGestionnaire);
         }
         function monGestionnaire() {
