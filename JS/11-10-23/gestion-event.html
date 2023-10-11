@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>Essai d'appel à un gestionnaire d'événement</title>
+    <meta charset="UTF-8">
+</head>
+
+<body onload="Init()">
+
+    <div>
+        <p><span id="span1">Un petit texte</span>, et un paragraphe...</p>
+    </div>
+    <script>
+        function Init() {
+            let texte = document.getElementById("span1");
+            texte.addEventListener("click", monGestionnaire);
+        }
+        function monGestionnaire() {
+            this.style.backgroundColor = "#f0f"
+        }
+
+    </script>
+</body>
+
+</html>

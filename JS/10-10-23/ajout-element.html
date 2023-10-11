@@ -25,12 +25,11 @@
 
 
         function addItem() {
-            let texte = document.getElementById("inputValue").value;
+            let texte = document.getElementById("inputValue");
         
             let newLi = document.createElement("li");
-            newLi.textContent = texte;
+            newLi.textContent = texte.value;
             list.appendChild(newLi);
-            texte = "";
         }
         console.log(list.lastElementChild);
         
