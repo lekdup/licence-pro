@@ -1,41 +1,49 @@
 package Entities;
 
 public class Carte {
-    String[] couleur = {"COEUR", "CARREAUX", "TRÈFLE", "PIQUE"};
-    String[] valeur = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "V", "D", "R", "A"};
-    String[] paquet = new String[52];
+    protected String couleur;
+    protected String valeur;
 
-    // create the deck of cards
+    public static final String[] COULEUR = {"Carreau", "Cœur", "Pique", "Trèfle"};
+    public static final String[] VALEUR = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "V", "D", "R", "A"};
 
-
-    //int nombreCarte = valeur.length * couleur.length;
-    // constructor that will buil a full deck of cards
-
-    public Carte() {
-        for (int i = 0; i < paquet.length; i++) {
-            paquet[i] = valeur[i%13] + " " + couleur[i/13];
-            System.out.println(paquet[i]);
-        }
-    }
-    //create getters for suits and ranks
-    /*
-    public String getCouleur() {
-        return couleur;
-    }
-
-    //public int getValeur() {
-        return valeur;
-    }
-
-    //create setters for suits and ranks
-    //public void setCouleur(String couleur) {
+    public Carte(String valeur, String couleur) {
         this.couleur = couleur;
-    }
-
-    //public void setValeur(int valeur) {
         this.valeur = valeur;
     }
 
-    //create comparator
-                */
+    //create getters for suits and ranks
+    public String getCouleur() {return couleur;}
+    public String getValeur() {return valeur;}
+
+    //setters
+    public void setCouleur(String couleur) {this.couleur = couleur;}
+    public void setValeur(String valeur) {this.valeur = valeur;}
+
+    //comparator
+    public int compare(Carte c) {
+        int valeur1 = 0;
+        int valeur2 = 0;
+        for (int i=0; i<VALEUR.length; i++) {
+            if (this.valeur.equals(VALEUR[i])) {
+                valeur1 = i;
+            }
+            if (c.valeur.equals(VALEUR[i])) {
+                valeur2 = i;
+            }
+        }
+        if (valeur1 > valeur2) {
+            return 1;
+        } else if (valeur1 < valeur2) {
+            return -1;
+        } else {
+            return 0;
+        }
+    }
+
+    @Override
+    public String toString() {
+        String s = valeur + " de " + couleur;
+        return s;
+    }
 }
