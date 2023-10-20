@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Déclaration d'objet</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+
+    <p><label for="champSaisie">Saisissez un nombre&nbsp;: </label><input type="text" id="champSaisie"></p>
+    <p><input type="submit" onclick="test.affiche();" value="Effectuer le calcul" /></p>
+
+    <script>
+        
+        function Test(fiche) {
+            var testValeur = typeof fiche.valeur !== 'undefined' ? fiche.valeur : 4;
+            var testChamps = typeof fiche.champs !== 'undefined' ? fiche.champs : "champSaisie";
+
+            this.affiche = function() {
+                var inputValue = Number(document.getElementById("champSaisie").value);
+                alert(inputValue + testValeur);
+            }
+        }
+
+        var test = new Test({valeur: 6});
+    </script>
+</body>
+
+</html>

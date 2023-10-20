@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <title>Essai try/catch</title>
+    <meta charset="UTF-8">
+</head>
+
+<body onload="go()">
+<script>
+    function choixNombre() {
+        let saisie = Number(prompt("Saisir un nombre entier positif : "));
+        if(isNaN(saisie)) {
+            throw(new Error("Il y a un problème de type"))
+        } else if (saisie > 0 && Math.round(saisie) == saisie) {
+            console.log("tout va bien ");
+        } else {
+            throw(new Error("Il y a un problème de signe"))
+        }
+
+    }
+    function go() {
+        try {
+            choixNombre();
+        } catch(error) {
+            console.error(error.message)
+        }
+    }
+</script>
+</body>
+
+</html>
